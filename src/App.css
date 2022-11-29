@@ -1,38 +1,150 @@
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  background-color: rgba(230, 248, 217, 0.288);
+  font-family: 'Mali', cursive;
+}
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;
+  background-color: rgba(248, 205, 205, 0.519);
 }
 
-.App-link {
-  color: #61dafb;
+
+.recipe {
+  background-color: rgba(249, 222, 222, 0.745);
+  margin: auto;
+  margin-top: 20px;
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  font-size: 60px;
+  letter-spacing: 0.4em;
+  color: rgb(133, 8, 8);
+}
+
+form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.search {
+  padding: 10px 20px;
+  color: rgb(187, 15, 15);
+  font-size: 25px;
+  border: inset 4px rgb(133, 8, 8);
+  border-radius: 20px;
+  background-color: rgba(236, 245, 225, 0.659);
+}
+
+.search:focus { 
+  outline: none !important;
+  border-color: rgb(228, 89, 98);
+  box-shadow: 0 0 5px #dc0909;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dish-picture {
+  border-radius: 20px;
+  width: 300px; 
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  color: rgb(187, 15, 15);
+  padding: 10px;
+  font-weight: 700;
+}
+
+li {
+  list-style: none;
+  color: rgb(102, 7, 17);
+}
+
+.tick-image {
+  width: 25px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
+.ingredients {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+
+p {
+  color: rgb(215, 33, 57);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.text-show {
+  font-size: 15px;
+  font-family: 'Mali', cursive;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(126, 12, 27);
+}
+
+a, .show-more-less-clickable {
+  cursor: pointer;
+  font-style: italic;
+  font-family: 'Mali', cursive;
+  font-size: 15px;
+  color: rgb(167, 21, 40);
+}
+
+.nutrients {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+@media all and (max-width: 500px) {
+  h1 {
+    font-size: 40px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+   .recipe {
+    width: 270px;
+   }
+
+   .dish-picture {
+    width: 200px; 
   }
 }
