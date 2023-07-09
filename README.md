@@ -1,6 +1,6 @@
 # REACT API EDAMAM RECIPE SEARCH 
 
-Demo: 
+Demo: https://recipes-edamam.vercel.app 
 
 On the main page you can type the ingredient you wish to you use and see the recipes with it.
 
