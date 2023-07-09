@@ -5,9 +5,8 @@ import search from './search.png';
 import RecipesComponent from './RecipesComponent';
 
 function App() {
-
-  const MY_ID = "5e27a2c5";
-  const MY_KEY = "c3827637dd90d691e2b3dcc50a72ef1e";
+  const MY_ID = process.env.REACT_APP_ID;
+  const  MY_KEY = process.env.REACT_APP_MY_KEY;
 
   const [mySearch, setMySearch] = useState("");
   const [myRecipes, setMyRecipes] = useState([]);
@@ -16,13 +15,13 @@ function App() {
   useEffect( ()=> {
     const getRecipe = async() => {
       const response = await fetch (`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}`);
+
       const data = await response.json();
       setMyRecipes(data.hits)
     }
     getRecipe();
     
-  }, [wordSubmitted]
-  ) 
+  }, [wordSubmitted]) 
 
   const myRecipeSearch = (e) => {
     setMySearch(e.target.value)
